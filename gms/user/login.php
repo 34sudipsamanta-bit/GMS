@@ -52,10 +52,10 @@ echo "<script>alert('Invalid Details');</script>";
     <link rel="stylesheet" href="../assets/vendor/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/login-theme.css" type="text/css">
 </head>
 
-<body class="theme-indigo">
+<body class="login-clean">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
@@ -67,11 +67,14 @@ echo "<script>alert('Invalid Details');</script>";
 	<div id="wrapper">
 		<div class="vertical-align-wrap">
 			<div class="vertical-align-middle auth-main">
-				<div class="auth-box">
-                    <div class="top">
+    			<div class="auth-box">
+                        <div class="auth-illustration">
+                            <img src="../assets/images/trash-illustration.png" alt="Trash illustration">
+                        </div>
+                        <div class="top">
                        
-                        <strong>Garbage</strong> <span>Management System</span>
-                    </div>
+                            <strong>Garbage</strong> <span>Management System</span>
+                        </div>
 					<div class="card">
                         <div class="header">
                             <p class="lead">Login to your account</p>

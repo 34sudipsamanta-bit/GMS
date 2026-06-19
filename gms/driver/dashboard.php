@@ -39,7 +39,7 @@ if (strlen($_SESSION['vamsid']==0)) {
             <div class="row clearfix">
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card widget_2 big_icon traffic">
-                        <div class="body" style="border:solid #000 1px">
+                        <div class="body">
                             <?php 
                          $did=$_SESSION['vamsdid'];
 $sql1 ="SELECT * from  tbllodgedcomplain where AssignTo=:did ";
@@ -58,7 +58,7 @@ $totassrequest=$query1->rowCount();
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card widget_2 big_icon sales">
-                        <div class="body" style="border:solid #000 1px">
+                        <div class="body">
                              <?php 
                          $did=$_SESSION['vamsdid'];
 $sql ="SELECT * from  tbllodgedcomplain where Status='On The Way' && AssignTo=:did ";
@@ -76,7 +76,7 @@ $tototwcomp=$query->rowCount();
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card widget_2 big_icon email">
-                        <div class="body" style="border:solid #000 1px">
+                        <div class="body" >
                             <?php 
                          $did=$_SESSION['vamsdid'];
 $sql ="SELECT * from  tbllodgedcomplain where Status='Completed' && AssignTo=:did ";
@@ -100,7 +100,7 @@ $totcompcomplain=$query->rowCount();
             <div class="row clearfix">
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card widget_2 big_icon traffic">
-                        <div class="body" style="border:solid #000 1px">
+                        <div class="body" >
                             <?php 
                          $did=$_SESSION['vamsdid'];
 $sql1 ="SELECT * from  tblbin where DriverAssignee=:did";
@@ -119,7 +119,7 @@ $totassbin=$query1->rowCount();
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card widget_2 big_icon sales">
-                        <div class="body" style="border:solid #000 1px">
+                        <div class="body" >
                              <?php 
                          $did=$_SESSION['vamsdid'];
 $sql ="SELECT * from  tblbin where Status='On The Way' && DriverAssignee=:did ";
@@ -137,7 +137,7 @@ $totinpro=$query->rowCount();
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card widget_2 big_icon email">
-                        <div class="body" style="border:solid #000 1px">
+                        <div class="body" >
                             <?php 
                          $did=$_SESSION['vamsdid'];
 $sql ="SELECT * from  tblbin where Status='Completed' && DriverAssignee=:did ";
