@@ -107,3 +107,8 @@ body.theme-indigo .card a small {
         background: rgba(255, 255, 255, 0.12) !important;
     }
 }
+
+/* Replace embedded data-URI logos with a static logo file (home-logo.png) */
+img[src^="data:image/png"]{display:none !important}
+.navbar-brand.new-brand img{display:inline-block}
+.top-logo img{display:inline-block}

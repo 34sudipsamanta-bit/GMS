@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Woody - Carpenter Website Template</title>
+    <title>Garbage Management System - Home</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Garbage Management System" name="keywords">
+    <meta content="Efficient garbage collection and waste management" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -20,169 +20,217 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib1/animate/animate.min.css" rel="stylesheet">
-    <link href="lib1/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib1/lightbox/css/lightbox.min.css" rel="stylesheet">
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css1/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="css1/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        /* Logo */
+        .gms-logo {
+            height: 45px;
+            object-fit: contain;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-gms {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-login {
+            background-color: white;
+            color: #667eea;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-login:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            margin: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        /* Navbar */
+        .navbar {
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #667eea !important;
+        }
+        
+        .nav-link {
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #667eea !important;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style="display: none;">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
 
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>123 Street, New York, USA</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary">WooDY</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <a href="project.html" class="nav-item nav-link">Project</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-3">
+        <div class="container-fluid">
+            <a href="index.php" class="navbar-brand d-flex align-items-center">
+                <img src="data:image/png;base64,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" alt="GMS Logo" class="gms-logo me-2">
+                <span>Garbage Management System</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.php" class="nav-link active">Home</a>
+                    <a href="admin/login.php" class="nav-link">Admin</a>
+                    <a href="driver/login.php" class="nav-link">Driver</a>
+                    <a href="user/login.php" class="nav-link">User</a>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img1/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To WooDY</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best Carpenter & Craftsman Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img1/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To WooDY</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best Carpenter & Craftsman Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img1/carousel-3.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To WooDY</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best Carpenter & Craftsman Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
-                        </div>
+    <!-- Hero Section Start (No Slideshow) -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEUAAAD///9PT0+ysrLNzc3IyMj29vZ+fn78/PwEBATt7e35+fleXl67u7vExMTz8/MxMTGgoKDb29vh4eFlZWWoqKgsLCx1dXWVlZXo6OglJSVJSUk2NjY7OzuFhYUeHh6RkZFBQUFtbW15eXkYGBhfX18QEBBUVFSbm5uKioqarkjDAAAKnElEQVR4nO2c65qqOgyG2wEVUHRAEPEsOqj3f4OrKYJtKR4QRmY9eX/svUax9qNpmqRFQhAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEIeS4Wp6W+xmxP92RFpgNXNPvGd4mSoJRkIz268XxP9I58xxrfPhWXk3T/0IiE7Ee0+mheOG43R4/2J82MKgT8H987dzphHIsZ+qG0fLDPWsANoBLhxrwzy/3Kk7E8o1o9ulOvsnJogP2vy+/LC9nGgaf7uUbLCmNCBjqfYbj6NM9rcm2Ty/Mt5QHcDjtGaHnheHYj4eZwY7/5EiatMf+GyvyYu9LvOi4P4Q+yJyE+w/1szYJpSkh4ghalPo/2mtPZ7jO/2PWOqUeIRd5AAd3rj+MLdo//6HVckTplhyH0vx7sATaA5NSY/07/XsfF2bhWRrBJ9b4xdyhvT8yIftgkpKb2Tz3wZFJzb+gcU/piqyltf3pzy6Mv6AxohNCBqLCVxxleh66i9b61gxn6svRzPDFBnaTsJWONUZITfA2N8yXm9jFT87cz+BSF6KaG16NRjxz1HjHGqOksNZ4HA23syFACMvh+MlwpgqWYa7crpqqB57GfVMhJzG6WQ24wPrnvWulGbtLc/1qjh86tNmieONctyWoZnkdHMYVpWsppnHfai6qbeTtweNSof70fNCmwSazTedyDhOqbOJykb7Z4I8+ef4ccxoTshEUJu+1x4Yx6NbauIfkYiYoNN5vc9mt8moMlTahTDNpoM3ttoFGGiOENV/Mn07vtsjWDbtL2zlflH4TIigc126qU7oEYhpKKaKlyWkXkdfznclkEpvu5Uv3fhJFmtfL2AdG6cp09ZMcotG6jVtkM2/aJ9Ki78nvk8V8SiUm7ih/78opt+/7XbSvC5McVoyMaV7rG07DkdxyE6QWBKO9Kl+z7FEN8UG66Ct79XHVxij567O63eXsGhClfmtc9JEjfMVsTCuIxaz3+un+o6JNSBWFl6Gm6WHTmdiMl5+EuKafvc5MZWBVCWSEN2vK709s37Ewu6jL5gpts6Jp893ISmGsDmI+E92KDlzxixaKD98Na4s16apw4VQ2HTcrcc0TX1FOZm13dkyVftxuz51KVlJclCm0NRvOBU6jCpk41uBRsEhYE9Np9ffn5KMoGEBl1DdSr6ky0Ye3qgYzi87lVD+Q/6zEVRVaVdW6peBTuMKBpjmRZlNNj6/zwrQAI6meJQKJopBqCyEs4+gLV3CFj5qPG1XIcuCxZEfQieUzCidlhVSzFZ5KekBhQh/xZh6nEFH6IzubL8VOHXe+OWzOY/XWn8sKqVIgtoktz2lQKPvpqXf4CTautDq+V1ApYXLDvJmSBX/enKl/6/RIdrF9jUJLLWUoXhkUinfKyfOZVAwwGnanCwu+V7TTMT+mkSHP+rnU3aiskE7kBFEN/Ng3paIUYfETHWyzCmErfyRvQw2g2MiHRE0Zd2J3xxqFUqfLgQNT+C1/UcGP8Lp6ivBdMjsVJgzYGo+zFM9hy/sAQ51CId7Jg1FZoZjMiDY9Gxf0mlbIcgyXF1BvA0G4Fs0aLh1tOOkU8kM6/G7My+8pY/hrG8nMf7Oc6CB8NcQVU810sMniu2B11CrMb4xuYYe3hD9/b4/V5aYvTkUWn8yeqfPrFMKHbf2yp/rSXbu6BKY8kBBd++HhZzhahRDcjLRvgELJvzph8DvluW8LPONRvL3PVd70Cmmy0r8OCi/qi5ZjuufDsuHMUIXZ1IVXiW/fuxZyWs/Usq1SaFXkR6Aw1b9FrakB4VprZbszHzVx8ogrm7ZkA5O3QmEV3AndOc86CVu0WZcOV/KSLgRPjSo83kuAMzfVDj73NuINvlUmKhSuaimUwpcyfmsTkt1aiEfESKuIT5pV+CCBemsn8y6zIQ81xRA4ryi8o1Cs2uVR0lI9mSzRcPZUYEMBG6IMcVk07ypU5qG2/uKLcZ5QL72X6T+1TVCLgOe1Utbq31FoLWSFiSYSnRLdGAKJ7hmPjF5rCmFfH06OiDbkVyscKiv+oLwQxKkYh6qx/CryXD+elKvP7Sns0SxpEyWChz1pFU5LCtWMcLIg9xTmHEdnudrR3rMPPCuMlJJpzFbhdTzsZwhv9MoK5dHuw673EwqBQGx515rCJXd9EDyJEh3I41I7hQf2RG9yLim0JVcMIcSzCuVkpMW0KvNwIFGqIRXlKPEUVSkDzooShcR+luAqCndhwUaOXizpura41hEhd5Ls7ZpMrURTgoqpRmF+b6xrBq8orD4bIVzX1opISHH8BDyq5DV4uLiU/LtbodDO/FQ+7opC8cZJRXKxJtBm8p/LggRf8v0Q7sgKlxUKyRZsvShcKwql8tT89sUHcc1o87DjQhg0OVmdws6bMAI+zCLtGJKZI5z8VxQG4t90YiQrO92OlBMDrR51LOISMEIpRB6C3d3SK75macdQRlFIdNvbCg0XvVUKVwDRzFJ0LdyoTtdXsoi1hsJyFbXEXNtQY9y2oMEut5L5QMCY8uXAmtVVeHwo8NVHP17EJl/FnO/DfJBcqgOvwPS8OpIaCqUDkVqa3V3TKBSjUOi0nDHs2Cv7eH6tNdRR+OgcRNhiOSpndVsVwKWOJOcgHQippbAq3QSsNuOZApvYtz6AR9lKIVxfiPzrKbznbea/MIKcQTGMk3WpS7egqqZCElSUMabtpfcycBfPhW1CUColN9TJQ7K6Cpm/0ZQxpr/4KDU/MbrJjRPGLJU3rEunTV5VSMiPXMZwjN8aP5HFwOWVpBgsVd5w6HOfvjd7BaY+Mzdvl5g75b115LnwhjFPPnhE3J6t3CwN2MvBY69b59bfI7pGacpxqfrRVfd+3mfh0yEY4VoeRqduyWi9arJ3zeBdvYv8CD816yU6yy7+kshXTCfQr2+ltO1ua6zRwaCTB/zZsu9CyJb0ZY3h67tFlwFJO/X0yRU2jENek1KjLu+1J55sMh6QReceduO2yGajCT1TTXX44ubtMCGzTyzwT7D2r5WwUmTpvuAeA7ok+w4+d5oRTWifx48HNbKsCGo0xNaRdPbn0mxeZfT5YZSd4nJoPH/KWD3Y1Ll00dPkrFn6OOZGeVY10t7jgYy4oXf4ZzVgIRux2Mbgg7Ar7XP2jfu/JQEFyTWxW6zcN0PEPE3IH8/YlLPZ/vhQfk4oW+HX4IVZkLvp4NPfKgOHWtkikWgeQYHfJCx71yArj3wT0t6JiybZMAs1eA6119fPJr6xC774FYtl4vWus5blJFHnjfTKgFnoOFu6L088apMB4vpNnwNuj8AvfqpuHz71LAoINDvsScssmYX2vcyznIy7h9auJkrClvdemmfOjNW8FsqW3j1zNcH7hHTx936O+QSPvbjX1X6bGFPdI5pDPmVT01r9PYFA1INnofNtlfQ0MEznth8wMY2AyzpYfpfjtfvYCTyPYc6FmDrdn4Lg51Tkgoe47d3B1jmFbBpa5nmkCWpGLGY3uvXzIPU4Bp7JzLPvu/PBaL9efa/W+2RnwLIyaPm8+m8yS+auLywdTs8L/iN5Aulitvr+u67lRf7kEoEgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIJ0g3+MTX8nEUW/twAAAABJRU5ErkJggg==" alt="GMS Logo" style="height: 120px; margin-bottom: 30px;">
+                    <h1>Garbage Management System</h1>
+                    <p>Efficient waste collection and management services for a cleaner environment</p>
+                    <div>
+                        <a href="admin/login.php" class="btn btn-login btn-gms">Admin Login</a>
+                        <a href="driver/login.php" class="btn btn-login btn-gms">Driver Login</a>
+                        <a href="user/login.php" class="btn btn-login btn-gms">User Login</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Carousel End -->
+    <!-- Hero Section End -->
 
-
-    <!-- Feature Start -->
-    <div class="container-xxl py-5">
+    <!-- Features Section Start -->
+    <div class="features-section">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-user-check fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">01</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-trash-alt"></i></div>
+                        <h3>Efficient Collection</h3>
+                        <p>Our system ensures timely garbage collection from all assigned areas with dedicated drivers.</p>
                     </div>
-                    <h5>Creative Designers</h5>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">02</h1>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Real-time Tracking</h3>
+                        <p>Track garbage bins and collection status in real-time through our modern tracking system.</p>
                     </div>
-                    <h5>Quality Products</h5>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Complaint Management</h3>
+                        <p>Report issues and lodge complaints easily. Our team responds promptly to all concerns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Garbage Management System. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Hide spinner on page load
+        window.addEventListener('load', function() {
+            document.getElementById('spinner').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
                             <i class="fa fa-drafting-compass fa-2x text-primary"></i>
@@ -744,23 +792,14 @@
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib1/wow/wow.min.js"></script>
-    <script src="lib1/easing/easing.min.js"></script>
-    <script src="lib1/waypoints/waypoints.min.js"></script>
-    <script src="lib1/counterup/counterup.min.js"></script>
-    <script src="lib1/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib1/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib1/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js1/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Hide spinner on page load
+        window.addEventListener('load', function() {
+            document.getElementById('spinner').style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>
